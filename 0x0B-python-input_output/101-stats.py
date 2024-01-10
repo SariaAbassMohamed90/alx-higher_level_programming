@@ -2,7 +2,9 @@
 '''Task 14 module'''
 
 
+
 from sys import stdin
+
 
 
 status_codes = {
@@ -35,11 +37,10 @@ try:
             total_size += int(splitted_line[-1])
             if status in status_codes:
                 status_codes[status] += 1
-        i += 1
- 
+                i += 1
 
-        if i % 10 == 0:
-            printer()
-     printer()
- except keyboardinterrupt as e:
+                if i % 10 == 0:
+                    printer()
+                printer()
+except keyboardinterrupt as e:
     printer()
