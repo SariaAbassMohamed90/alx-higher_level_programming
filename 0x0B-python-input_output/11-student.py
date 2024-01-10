@@ -29,11 +29,11 @@ class Student:
         return my_dict
 
     def reload_from_json(self, json):
-    '''this function replaces all attributes of the student instance
-    with the ones in the json argument
-    '''
+        '''this function replaces all attributes of the student instance
+        with the ones in the json argument
+        '''
 
-    for key, value in json.items():
-        if key in self.__dict__:
-            self.__dict__[key] = value
+        for key, value in json.items():
+            if key in self.__dict__:
+                self.__dict__[key] = value
 
