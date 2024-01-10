@@ -16,22 +16,22 @@ class Student:
         in this list must be retrieved.
         Otherwise, all attributes must be retrieved
         '''
-    try:
-        for attr in attrs:
-            if type(attr) is not str:
-                return self.__dict__
-    except Exception:
-        return self.__dict__
-    my_dict = dict()
-    for key, value in self.__dict__.items():
-        if key in attrs:
-            my_dict[key] = value
-            return my_dict
+        try:
+            for attr in attrs:
+                if type(attr) is not str:
+                    return self.__dict__
+        except Exception:
+            return self.__dict__
+        my_dict = dict()
+        for key, value in self.__dict__.items():
+            if key in attrs:
+                my_dict[key] = value
+        return my_dict
 
     def reload_from_json(self, json):
-        '''this function replaces all attributes of the student instance
-        with the ones in the json argument
-        '''
+    '''this function replaces all attributes of the student instance
+    with the ones in the json argument
+    '''
 
     for key, value in json.items():
         if key in self.__dict__:
